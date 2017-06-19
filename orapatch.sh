@@ -24,9 +24,17 @@ export ORACLE_SID=`echo $DBS | awk '{ print $1 }'`
 LGREEN='\033[1;32m'
 NC='\033[0m'
 
+trap clean_up SIGHUP SIGINT SIGTERM
+
 stat(){
 	NOW=$(date +"%d-%m-%Y %T")
 	echo -e "${LGREEN} $NOW $1 ${NC}"
+}
+
+#handle ctrl+c during execution by leaving everything down
+clean_up() {
+	force_stop_dbs()
+	stop_listener()
 }
 
 force_stop_dbs(){
