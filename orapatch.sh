@@ -133,7 +133,7 @@ stop_listener
 #patchsets from Oracle support under /var/tmp and unzipped them
 #aswell game them proper permissions (eg. chown oracle.dba <files>)
 
-#directory numbers here reflect PSU Jan'17 - please edit them accordigly
+#directory numbers here reflect PSU Aug'17 - please edit them accordigly
 #first one is RDBMS core patches, latter one requiring startup upgrade
 #is OJVM patchset. Always check Oracle patchset notes before proceeding!
 
