@@ -33,8 +33,8 @@ stat(){
 
 #handle ctrl+c during execution by leaving everything down
 clean_up() {
-	force_stop_dbs()
-	stop_listener()
+	force_stop_dbs
+	stop_listener
 }
 
 force_stop_dbs(){
@@ -137,8 +137,8 @@ stop_listener
 #first one is RDBMS core patches, latter one requiring startup upgrade
 #is OJVM patchset. Always check Oracle patchset notes before proceeding!
 
-cd /var/tmp/24917069
-cd /var/tmp/24917069/24732082
+cd /var/tmp/26550023
+cd /var/tmp/26550023/26609783
 opatch apply
 startup_normal
 datapatch_verbose
@@ -147,7 +147,7 @@ compile_all
 stop_dbs
 stop_listener
 
-cd /var/tmp/24917069/24917972
+cd /var/tmp/26550023/26027162
 opatch apply
 startup_upgrade
 datapatch_verbose

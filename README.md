@@ -8,10 +8,8 @@ Change ownership to same as Oracle binaries owner. Unzip it. Run script.
 
 Note, it will bring everything down for patching immediately.
 
-As Oracle recommends, it's good idea to check beforehand if there are patchset conflicts
-$ cd <PATCH_TOP_DIR>/24917972
-$ opatch prereq CheckConflictAgainstOHWithDetail -ph ./
-
 If patch rollback is required, you need to do it manually. Best if you are familiar with Oracle patching before using this to avoid headaches. I hope this makes it bit easier for all DBA's out there.
 
 Good idea to always check patchset notes. In case apply method or order has changed from previous CPU/PSU or requiring custom steps.
+
+Current script reflects patching instructions for August patchset for RDBMS/Java PSU/CPU 2017.
